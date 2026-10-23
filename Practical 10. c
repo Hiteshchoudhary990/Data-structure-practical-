@@ -1,4 +1,4 @@
-10. Implement traversal methods (inorder, preorder, postorder) for a binary tree.
+
 #include <stdio.h>
 #include<conio.h>
 #include <stdlib.h>
