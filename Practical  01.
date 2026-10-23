@@ -1,9 +1,4 @@
-```c
-/*
-Question 1:
-Write a C program to declare pointers and perform
-call by value and call by reference.
-*/
+
 
 #include <stdio.h>
 
