@@ -1,9 +1,3 @@
-```c
-/*
-Question 2:
-Develop a C program to perform insertion, deletion,
-searching, and traversal operations on arrays.
-*/
 
 #include <stdio.h>
 
