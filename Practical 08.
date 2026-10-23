@@ -1,5 +1,4 @@
-8. Develop a doubly linked list to implement insertion and deletion operations at different
-positions (beginning/end/specified position).
+
 
 #include <stdio.h>
 #include <stdlib.h>
