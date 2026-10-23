@@ -1,1 +1,93 @@
+```c
+/*
+Question 3:
+Implement a stack using an array with operations
+PUSH, POP, PEEP, CHANGE, and DISPLAY.
+*/
 
+#include <stdio.h>
+
+#define MAX 5
+
+int stack[MAX];
+int top = -1;
+
+void push(int value)
+{
+    if (top == MAX - 1)
+    {
+        printf("Stack Overflow!\n");
+        return;
+    }
+
+    stack[++top] = value;
+    printf("%d pushed\n", value);
+}
+
+void pop()
+{
+    if (top == -1)
+    {
+        printf("Stack Underflow!\n");
+        return;
+    }
+
+    printf("%d popped\n", stack[top--]);
+}
+
+void peep(int position)
+{
+    if (position < 1 || position > top + 1)
+    {
+        printf("Invalid position\n");
+        return;
+    }
+
+    printf("Element: %d\n", stack[top - position + 1]);
+}
+
+void change(int position, int value)
+{
+    if (position < 1 || position > top + 1)
+    {
+        printf("Invalid position\n");
+        return;
+    }
+
+    stack[top - position + 1] = value;
+    printf("Element changed\n");
+}
+
+void display()
+{
+    if (top == -1)
+    {
+        printf("Stack is empty\n");
+        return;
+    }
+
+    printf("Stack: ");
+
+    for (int i = top; i >= 0; i--)
+        printf("%d ", stack[i]);
+
+    printf("\n");
+}
+
+int main()
+{
+    push(10);
+    push(20);
+    push(30);
+
+    display();
+    peep(2);
+
+    change(2, 25);
+    display();
+
+    pop();
+    display();
+
+    return 0;
+}
