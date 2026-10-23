@@ -1,9 +1,4 @@
-```c
-/*
-Question 3:
-Implement a stack using an array with operations
-PUSH, POP, PEEP, CHANGE, and DISPLAY.
-*/
+
 
 #include <stdio.h>
 
