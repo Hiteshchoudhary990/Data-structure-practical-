@@ -1,12 +1,4 @@
-```c
-/*
-Question 5:
-Implement a queue using an array with operations
-INSERT (enqueue), DELETE (dequeue), and DISPLAY.
-*/
-
 #include <stdio.h>
-
 #define MAX 5
 
 int queue[MAX];
@@ -78,4 +70,4 @@ int main()
 
     return 0;
 }
-```
+
