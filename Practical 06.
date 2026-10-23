@@ -1,5 +1,4 @@
-6. Implement a singly linked list with operations such as insertion (beginning/end/specified
-position)
+
 
 #include <stdio.h>
 #include<conio.h>
