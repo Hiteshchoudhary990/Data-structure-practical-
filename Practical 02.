@@ -1,1 +1,73 @@
+```c
+/*
+Question 2:
+Develop a C program to perform insertion, deletion,
+searching, and traversal operations on arrays.
+*/
 
+#include <stdio.h>
+
+#define MAX 100
+
+int main()
+{
+    int arr[MAX] = {10, 20, 30, 40};
+    int n = 4;
+    int pos, value, key, found = 0;
+
+    printf("Initial Array: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    // Insertion at position 3
+    pos = 3;
+    value = 25;
+
+    for (int i = n; i >= pos; i--)
+        arr[i] = arr[i - 1];
+
+    arr[pos - 1] = value;
+    n++;
+
+    printf("\nAfter Insertion: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    // Deletion from position 2
+    pos = 2;
+
+    for (int i = pos - 1; i < n - 1; i++)
+        arr[i] = arr[i + 1];
+
+    n--;
+
+    printf("\nAfter Deletion: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    // Searching
+    key = 30;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i] == key)
+        {
+            printf("\nElement %d found at position %d",
+                   key, i + 1);
+            found = 1;
+            break;
+        }
+    }
+
+    if (!found)
+        printf("\nElement not found");
+
+    // Traversal
+    printf("\nFinal Array: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    printf("\n");
+
+    return 0;
+}
